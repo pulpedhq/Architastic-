@@ -1,4 +1,18 @@
 Architastic::Application.routes.draw do
+  resources :crit_requirements
+
+  resources :crit_notes
+
+  resources :crits
+
+  resources :todos
+
+  resources :tasks
+
+  resources :briefs
+
+  resources :projects
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
