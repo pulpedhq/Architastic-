@@ -6,7 +6,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @tasks }
+      #format.xml  { render :xml => @tasks }
     end
   end
 
@@ -17,7 +17,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @task }
+      #format.xml  { render :xml => @task }
     end
   end
 
@@ -28,7 +28,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @task }
+      #format.xml  { render :xml => @task }
     end
   end
 
@@ -44,11 +44,11 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to(@task, :notice => 'Task was successfully created.') }
-        format.xml  { render :xml => @task, :status => :created, :location => @task }
+        format.html { redirect_to :controller => "projects", :action => "show", :id => @task.project_id }
+        #format.xml  { render :xml => @task, :status => :created, :location => @task }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @task.errors, :status => :unprocessable_entity }
+        #format.xml  { render :xml => @task.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -61,10 +61,10 @@ class TasksController < ApplicationController
     respond_to do |format|
       if @task.update_attributes(params[:task])
         format.html { redirect_to(@task, :notice => 'Task was successfully updated.') }
-        format.xml  { head :ok }
+        #format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @task.errors, :status => :unprocessable_entity }
+        #format.xml  { render :xml => @task.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -76,8 +76,8 @@ class TasksController < ApplicationController
     @task.destroy
 
     respond_to do |format|
-      format.html { redirect_to(tasks_url) }
-      format.xml  { head :ok }
+      format.html { redirect_to :controller => "projects", :action => "show", :id => @task.project_id }
+      #format.xml  { head :ok }
     end
   end
 end

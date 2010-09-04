@@ -1,10 +1,67 @@
+/* new clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/* Application Layout Styles */
+
+body {
+	font-family:"hoefler text alt";
+	font-size:14pt;
+}
+
 #wrap {
-	width:960px;
 	margin:auto;
+	width:960px;
 }
 
 #logo {
-	display:block;
-	text-align:center;
 	margin:auto;
+	display:block;
+	margin-top:20px;
+}
+
+#main {
+	padding-top:60px;
+}
+
+/* Projects Listing Styles */
+
+.flash_message {
+	display:inline;
+	padding:5px;
+	background-color:#D9C5AC;
+	border:1px solid #4C453D;
+	margin:10px 0;
+	clear:both;
+	float:left;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+
+.listing {
+	display:inline;
+	padding:5px;
+	background-color:#D9C5AC;
+	border:1px solid #4C453D;
+	margin:10px 0;
+	clear:both;
+	float:left;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+
+.list {
+	clear:both;
+}
+
+.projects {
+	clear:both;
 }

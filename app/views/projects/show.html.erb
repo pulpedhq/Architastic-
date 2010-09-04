@@ -1,12 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Id:</b>
-  <%= @project.id %>
-</p>
-
-<p>
-  <b>Name:</b>
+  <b>Project:</b>
   <%= @project.name %>
 </p>
 
@@ -20,11 +15,34 @@
   <%= @project.status %>
 </p>
 
-<p>
-  <b>User:</b>
-  <%= @project.user_id %>
-</p>
+<hr />
+<h2>Tasks remaining</h2>
+<% @tasks.each do |task| %>
+	<dt><strong>Task Name: <%= task.name %><br /></strong></dt><br />
+	<dt><strong>Priority: <%= task.priority %><br /></strong></dt>
+	<br />
+	<%= link_to 'Destroy', task, :method => :delete %>
+<% end %>
+<hr />
+<h1>Add new task</h1>
 
+<%= form_for :task, @task, :url => {:controller => "tasks", :action => "create"}, :html => {:class => "add_task_form"} do |f| %>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
+	<label for="name">Name:</label>
+	<p><%= f.text_field :name %></p>
+	
+	<label for="deadline">Priority:</label>
+	<p><%= select 'task', 'priority', %w(Low Medium High) %></p>
+	
+	<%= f.hidden_field :status, :value => "Active" %>
+	
+	<%= f.hidden_field :project_id, :value => @project.id %>
+	
+	<%= submit_tag 'Add Task' %>
+	
+<% end %>
+
+<!--
+<%= link_to 'Edit', edit_project_path(@project) %> 
 <%= link_to 'Back', projects_path %>
+-->
