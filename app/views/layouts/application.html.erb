@@ -7,7 +7,14 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-	
+			<div class="topbar clearfix">
+				<ul class="user_links">
+				<% if user_signed_in? %>
+					<li>Signed in as: <%= current_user.email %></li>
+					<li><%= link_to "Sign out", destroy_user_session_path %>
+				<% end %>
+				</ul>
+			</div>
 			<%= render :partial => 'header' %>
 			<%= yield %>
 		</div>

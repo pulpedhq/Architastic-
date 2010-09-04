@@ -37,8 +37,8 @@ body {
 .flash_message {
 	display:inline;
 	padding:5px;
-	background-color:#D9C5AC;
-	border:1px solid #4C453D;
+	background-color:#ccc;
+	border:1px solid #ddd;
 	margin:10px 0;
 	clear:both;
 	float:left;
@@ -49,8 +49,8 @@ body {
 .listing {
 	display:inline;
 	padding:5px;
-	background-color:#D9C5AC;
-	border:1px solid #4C453D;
+	background-color:#ccc;
+	border:1px solid #ddd;
 	margin:10px 0;
 	clear:both;
 	float:left;
@@ -65,3 +65,29 @@ body {
 .projects {
 	clear:both;
 }
+
+.user_links {
+	float:right;
+	padding-right:10px;
+}
+
+.user_links li {
+	float:left;
+	margin:0 10px;
+	padding:5px;
+	background-color:#ddd;
+}
+.topbar {
+	background-color:#CCCCCC;
+	padding:10px;
+	width:100%;
+}
+
+.details li {
+	float:left;
+	padding: 0 10px;
+}
+
+
+
+
