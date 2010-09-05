@@ -34,6 +34,51 @@ body {
 
 /* Projects Listing Styles */
 
+.projects_list {
+	
+}
+
+.projects_list li {
+	display:block;	
+	margin: 10px 0;
+	float:left;
+	clear:both;
+}
+
+.projects_list li:hover {
+}
+
+.project {
+	
+}
+
+.project li {
+	float:left;	
+	clear:none !important;
+}
+
+.project_details {
+	-moz-border-radius:10px;
+	border:1px solid #bbb;
+	background-color:#fff;
+}
+
+.project_details:hover {
+	background-color:#ccc;
+}
+
+.project_details li {
+	float:left;
+	clear:none !important;
+	padding:0 10px;
+}
+
+.icon {
+	vertical-align:middle;
+	padding-top:7px;
+	padding-left:7px;
+}
+
 .flash_message {
 	display:inline;
 	padding:5px;
@@ -44,22 +89,6 @@ body {
 	float:left;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
-}
-
-.listing {
-	display:inline;
-	padding:5px;
-	background-color:#ccc;
-	border:1px solid #ddd;
-	margin:10px 0;
-	clear:both;
-	float:left;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-}
-
-.list {
-	clear:both;
 }
 
 .projects {
@@ -82,12 +111,5 @@ body {
 	padding:10px;
 	width:100%;
 }
-
-.details li {
-	float:left;
-	padding: 0 10px;
-}
-
-
 
 
